@@ -11,146 +11,179 @@
 </head>
 
 <body>
-    <nav>
-        <button>
-            <a href="#birincitapsiriq">Birinci Tapsiriq</a>
-        </button>
-        <button>
-            <a href="#ikincitapsiriq">İkinci Tapsiriq</a>
-        </button>
-        <button>
-            <a href="#ucuncutapsiriq">Ucuncu Tapsiriq</a>
-        </button>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#birincitapsiriq">Birinci tapsiriq</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#ikincitapsiriq">İkinci tapsiriq</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#ucuncutapsiriq">Üçüncü tapsiriq</a>
+              </li>
+          </div>
+        </div>
+      </nav>
     <section id="birincitapsiriq">
-        <h2 style="padding-top: 25px;">Baki - Gence</h2>
 
-        Oldugunuz yeri qeyd edin: <br>
-        <input type="text" id="oldugumuzyer"> <br> <br>
-        Getdiyiniz yeri qeyd edin: <br>
-        <input type="text" id="getdiyimizyer"> <br><br>
+        <div class="jcc">
+            <div class="card w-75 mb-3">
+                <div class="card-body mx-auto"> 
+                    <h2 style="padding-top: 25px;">Baki - Gence</h2>
 
-        Mesafeni qeyd edin: <input type="text" id="mesafe"> <br> <br>
-        Sureti qeyd edin: <input type="text" id="suret"> <br><br>
+                    Oldugunuz yeri qeyd edin: <br>
+                    <input type="text" id="oldugumuzyer"> <br> <br>
+                    Getdiyiniz yeri qeyd edin: <br>
+                    <input type="text" id="getdiyimizyer"> <br><br>
+            
+                    Mesafeni qeyd edin: <br>
+                    <input type="text" id="mesafe"> <br> <br>
+                    Sureti qeyd edin: <br>
+                    <input type="text" id="suret"> <br><br>
+            
+            
+                    <button class="zaman btn btn-primary">Zamani tap</button>
+                    <h2 id="netice"></h2>
+                </div>
+          </div>
+          </div>
 
 
-        <button class="zaman btn btn-primary">Zamani tap</button>
-        <h2 id="netice"></h2>
 
 
         <script src="script.js"></script>
     </section>
     <section id="ikincitapsiriq">
-        <h1 style="padding-top: 40px;">Calculyator</h1>
-        Reqem A: <input type="text" id="num1"> <br> <br>
-        Reqem B: <input type="text" id="num2"> <br> <br>
-        <button class="toplama btn btn-success">Toplama</button>
-        <button class="cixma btn btn-success">Cixma</button>
-        <button class="vurma btn btn-success">Vurma</button>
-        <button class="bolme btn btn-success">Bolme</button>
-        <button class="kub btn btn-success">Kub</button>
-        <h2 id="result" style="padding-top: 20px;"></h2>
+        <div class="jcc">
+            <div class="card w-75 mb-3">
+                <div class="card-body mx-auto"> 
+                    <h1 style="padding-top: 40px;">Calculyator</h1>
+                    Reqem A: <input type="text" id="num1"> <br> <br>
+                    Reqem B: <input type="text" id="num2"> <br> <br>
+                    <button class="toplama btn btn-success">Toplama</button>
+                    <button class="cixma btn btn-success">Cixma</button>
+                    <button class="vurma btn btn-success">Vurma</button>
+                    <button class="bolme btn btn-success">Bolme</button>
+                    <button class="kub btn btn-success">Kub</button>
+                    <h2 id="result" style="padding-top: 20px;"></h2>
+            
+            
+            
+                    <script>
+                        const toplama = document.querySelector('.toplama');
+            
+                        toplama.onclick = function () {
+                            let netice = +num1.value + +num2.value;
+                            document.getElementById('result').innerHTML = netice;
+                        }
+            
+                        const cixma = document.querySelector('.cixma');
+            
+                        cixma.onclick = function () {
+                            let netice1 = num1.value - num2.value;
+                            document.getElementById('result').innerHTML = netice1;
+                        }
+            
+                        const vurma = document.querySelector('.vurma');
+            
+                        vurma.onclick = function () {
+                            let netice2 = num1.value * num2.value;
+                            document.getElementById('result').innerHTML = netice2;
+                        }
+                        const bolme = document.querySelector('.bolme');
+            
+                        bolme.onclick = function () {
+                            let netice3 = num1.value / num2.value;
+                            document.getElementById('result').innerHTML = netice3;
+                        }
+            
+                        const kub = document.querySelector('.kub');
+            
+                        kub.onclick = function () {
+                            let netice4 = num1.value ** num2.value;
+                            document.getElementById('result').innerHTML = netice4;
+                        }
+                    </script>
+                </div>
+          </div>
+          </div>
 
-
-
-        <script>
-            const toplama = document.querySelector('.toplama');
-
-            toplama.onclick = function () {
-                let netice = +num1.value + +num2.value;
-                document.getElementById('result').innerHTML = netice;
-            }
-
-            const cixma = document.querySelector('.cixma');
-
-            cixma.onclick = function () {
-                let netice1 = num1.value - num2.value;
-                document.getElementById('result').innerHTML = netice1;
-            }
-
-            const vurma = document.querySelector('.vurma');
-
-            vurma.onclick = function () {
-                let netice2 = num1.value * num2.value;
-                document.getElementById('result').innerHTML = netice2;
-            }
-            const bolme = document.querySelector('.bolme');
-
-            bolme.onclick = function () {
-                let netice3 = num1.value / num2.value;
-                document.getElementById('result').innerHTML = netice3;
-            }
-
-            const kub = document.querySelector('.kub');
-
-            kub.onclick = function () {
-                let netice4 = num1.value ** num2.value;
-                document.getElementById('result').innerHTML = netice4;
-            }
-        </script>
     </section>
     <section id="ucuncutapsiriq">
-        Manati daxil edin: <input type="text" id="azn"> <br><br>
+        <div class="jcc uctap">
+            <div class="card w-75 mb-3">
+                <div class="card-body mx-auto"> 
+                    Manati daxil edin: <input type="text" id="azn"> <br><br>
 
-        <hr>
-        <button class="usd">USD</button>
-        <button class="tl">TL</button>
-        <button class="euro">EURO</button>
-        <button class="riyal">RİYAL</button>
-        <button class="cyn">CYN</button> <br><br>
-        <h2 id="netice" style="background-color: black; color: white;"></h2>
-
-        <script>
-            let usd = 1.70;
-            let tl = 0.052;
-            let yuan = 0.24;
-            let euro = 1.85;
-            let riyal = 0.45;
-            let rubl = 0.019;
-
-            const dollar = document.querySelector('.usd');
-
-            dollar.onclick = function () {
-                let netice1 = azn.value * usd;
-                document.getElementById('netice').innerHTML = netice1;
-            }
-
-            const lira = document.querySelector('.tl');
-
-            lira.onclick = function () {
-                let netice2 = azn.value * tl;
-                document.getElementById('netice').innerHTML = netice2;
-            }
-
-            const yuann = document.querySelector('.yuan');
-
-            yuann.onclick = function () {
-                let netice3 = azn.value * yuan;
-                document.getElementById('netice').innerHTML = netice3;
-            }
-
-            const euroo = document.querySelector('.euro');
-
-            euroo.onclick = function () {
-                let netice4 = azn.value * euro;
-                document.getElementById('netice').innerHTML = netice4;
-            }
-
-            const riyall = document.querySelector('.riyal');
-
-            riyall.onclick = function () {
-                let netice5 = azn.value * riyal;
-                document.getElementById('netice').innerHTML = netice5;
-            }
-
-            const rubll = document.querySelector('.rubl');
-
-            rubll.onclick = function () {
-                let netice6 = azn.value * rubl;
-                document.getElementById('netice').innerHTML = netice6;
-            }
-
-        </script>
+                    <hr>
+                    <button class="usd btn btn-primary">USD</button>
+                    <button class="tl btn btn-primary">TL</button>
+                    <button class="euro btn btn-primary">EURO</button>
+                    <button class="riyal btn btn-primary">RİYAL</button>
+                    <button class="cyn btn btn-primary">CYN</button> <br><br>
+                    <h2 id="netice" style="background-color: white; color: black;"></h2>
+            
+                    <script>
+                        let usd = 1.70;
+                        let tl = 0.052;
+                        let yuan = 0.24;
+                        let euro = 1.85;
+                        let riyal = 0.45;
+                        let rubl = 0.019;
+            
+                        const dollar = document.querySelector('.usd');
+            
+                        dollar.onclick = function () {
+                            let netice1 = azn.value * usd;
+                            document.getElementById('netice').innerHTML = netice1;
+                        }
+            
+                        const lira = document.querySelector('.tl');
+            
+                        lira.onclick = function () {
+                            let netice2 = azn.value * tl;
+                            document.getElementById('netice').innerHTML = netice2;
+                        }
+            
+                        const yuann = document.querySelector('.yuan');
+            
+                        yuann.onclick = function () {
+                            let netice3 = azn.value * yuan;
+                            document.getElementById('netice').innerHTML = netice3;
+                        }
+            
+                        const euroo = document.querySelector('.euro');
+            
+                        euroo.onclick = function () {
+                            let netice4 = azn.value * euro;
+                            document.getElementById('netice').innerHTML = netice4;
+                        }
+            
+                        const riyall = document.querySelector('.riyal');
+            
+                        riyall.onclick = function () {
+                            let netice5 = azn.value * riyal;
+                            document.getElementById('netice').innerHTML = netice5;
+                        }
+            
+                        const rubll = document.querySelector('.rubl');
+            
+                        rubll.onclick = function () {
+                            let netice6 = azn.value * rubl;
+                            document.getElementById('netice').innerHTML = netice6;
+                        }
+            
+                    </script>
+                </div>
+          </div>
+          </div>
     </section>
 
 
